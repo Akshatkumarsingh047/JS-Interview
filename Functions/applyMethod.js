@@ -17,7 +17,7 @@ Function.prototype.myApply=function(context,args){
    let newProp=Symbol();   // so that the Context's (Object's i.e first argument's) existing method does not
                             //  Mixes with the the function name on which call is called
  
-   currentContext[newProp]=this;
+   currentContext[newProp]=this;    //this --> the function on which the Apply Method is Called.
    const res=currentContext[newProp](...args)
 
      // Step 5: Delete temporary key
